@@ -1,5 +1,6 @@
 # EXPERIMENT-06-INTERRUPT-GENERATION-USING-PUSHBUTTON-AND-SIMULATING-THE-OUTPUT
-
+# Name: ARAVIND P
+# Reg no:212224240015
 ### Aim:
 To Interface a push button and generate an interrupt , simulate it using an led and simuate it on  proteus 
 
@@ -89,14 +90,24 @@ https://engineeringxpert.com/wp-content/uploads/2022/04/26.png
   
 
 ## STM 32 CUBE PROGRAM :
+```
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+	if(GPIO_Pin==GPIO_PIN_0)
+	{
+		HAL_GPIO_TogglePin(GPIOA,GPIO_PIN_5);
+	}
+}
+```
 
 
-
-## Output screen shots of proteus  :
- 
+## Output 
+screen shots of proteus  :
+ <img width="1181" height="990" alt="ss" src="https://github.com/user-attachments/assets/c5885ee4-9e07-4557-abc1-704d024ba128" />
  
  ## CIRCUIT DIAGRAM (EXPORT THE GRAPHICS TO PDF AND ADD THE SCREEN SHOT HERE): 
- 
+ <img width="998" height="895" alt="cc" src="https://github.com/user-attachments/assets/ed3223bb-ccb9-420e-99d6-6363c977e8cb" />
+
  
 ## Result :
 Interfacing a push button and interrupt genrateion is simulated using proteus 
